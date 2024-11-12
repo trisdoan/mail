@@ -8,7 +8,7 @@ import {useService} from "@web/core/utils/hooks";
 import {Component, toRaw, useState} from "@odoo/owl";
 
 export class FailedMessage extends Component {
-    static props = ["message", "onUpdate?", "reloadParentView"];
+    static props = ["message","reloadParentView"];
     // eslint-disable-next-line no-empty-function
     static defaultProps = {onUpdate: () => {}};
     static template = "mail_tracking.FailedMessage";
@@ -24,14 +24,6 @@ export class FailedMessage extends Component {
         this.state = useState({showDetails: false});
         this.message = useState(this.props.message);
         this.orm = useService("orm");
-    }
-    async setFailedMessageReviewed() {
-        await this.orm.call("mail.message", "set_need_action_done", [
-            [this.message.id],
-        ]);
-        // Debugger
-        this.thread.fetchNewMessages();
-        this.props.reloadParentView();
     }
     retryFailedMessage() {
         const message = toRaw(this.message);

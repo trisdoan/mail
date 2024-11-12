@@ -1,5 +1,4 @@
 import {useService} from "@web/core/utils/hooks";
-import {browser} from "@web/core/browser/browser";
 
 const {Component, useState} = owl;
 
@@ -15,7 +14,6 @@ export class FailedMessageReview extends Component {
         await this.orm.call("mail.message", "set_need_action_done", [
             [this.message.id],
         ]);
-        browser.location.reload();
     }
     retryFailedMessage() {
         this.env.services.action.doAction("mail.mail_resend_message_action", {

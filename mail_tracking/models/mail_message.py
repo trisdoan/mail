@@ -283,7 +283,10 @@ class MailMessage(models.Model):
         """This will mark the messages to be ignored in the tracking issues filter"""
         self.check_access("read")
         self.mail_tracking_needs_action = False
-        self._notify_message_notification_update()
+        self.env.user._bus_send(
+            "mail.tracking/set_need_action_done",
+            {"message_ids": [self.id]},
+        )
 
     @api.model
     def get_failed_count(self):
