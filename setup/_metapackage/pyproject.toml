@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-oca-mail"
+version = "18.0.20241118.0"
+dependencies = [
+    "odoo-addon-mail_notification_clean_status_error==18.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 18.0",
+]
