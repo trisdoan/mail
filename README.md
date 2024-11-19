@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[mail_layout_preview](mail_layout_preview/) | 18.0.1.0.0 |  | Preview email templates in the browser
 [mail_notification_clean_status_error](mail_notification_clean_status_error/) | 18.0.1.0.0 | [![sebalix](https://github.com/sebalix.png?size=30px)](https://github.com/sebalix) | Extend Odoo scheduled action to also delete notifications in error.
 [mail_restrict_follower_selection](mail_restrict_follower_selection/) | 18.0.1.0.0 |  | Define a domain from which followers can be selected
 
