@@ -1,11 +1,12 @@
 [project]
 name = "odoo-addons-oca-mail"
-version = "18.0.20241206.0"
+version = "18.0.20241206.1"
 dependencies = [
     "odoo-addon-mail_debrand==18.0.*",
     "odoo-addon-mail_layout_preview==18.0.*",
     "odoo-addon-mail_notification_clean_status_error==18.0.*",
     "odoo-addon-mail_restrict_follower_selection==18.0.*",
+    "odoo-addon-mail_tracking==18.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",
